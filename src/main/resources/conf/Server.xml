@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:motan="http://api.weibo.com/schema/motan"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+   http://api.weibo.com/schema/motan http://api.weibo.com/schema/motan.xsd">
+
+    <bean id="downloadPage" class="com.tyler.module.DownloadPageImpl"/>
+    <!-- exporting service by motan -->
+    <motan:service interface="com.tyler.module.DownloadPage" ref="downloadPage" export="19961"
+                   basicService="serviceBasicConfig"/>
+
+    <bean id="analyzeUrl" class="com.tyler.module.AnalyzeUrlImpl"/>
+    <!-- exporting service by motan -->
+    <motan:service interface="com.tyler.module.AnalyzeUrl" ref="analyzeUrl" export="19962"
+                   basicService="serviceBasicConfig"/>
+
+    <bean id="analyzePageLinks" class="com.tyler.module.AnalyzePageLinksImpl"/>
+    <!-- exporting service by motan -->
+    <motan:service interface="com.tyler.module.AnalyzePageLinks" ref="analyzePageLinks" export="19963"
+                   basicService="serviceBasicConfig"/>
+
+    <bean id="analyzePageDetails" class="com.tyler.module.AnalyzePageDetailsImpl"/>
+    <!-- exporting service by motan -->
+    <motan:service interface="com.tyler.module.AnalyzePageDetails" ref="analyzePageDetails" export="19964"
+                   basicService="serviceBasicConfig"/>
+
+    <bean id="saveToLocal" class="com.tyler.module.SaveToLocalImpl"/>
+    <!-- exporting service by motan -->
+    <motan:service interface="com.tyler.module.SaveToLocal" ref="saveToLocal" export="19965"
+                   basicService="serviceBasicConfig"/>
+</beans>

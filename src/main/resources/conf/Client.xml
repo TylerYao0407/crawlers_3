@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:motan="http://api.weibo.com/schema/motan"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+   http://api.weibo.com/schema/motan http://api.weibo.com/schema/motan.xsd">
+
+    <!-- reference to the remote service -->
+    <motan:referer id="downloadPageService" interface="com.tyler.module.DownloadPage" directUrl="192.168.6.194:19961" requestTimeout="200000"/>
+    <motan:referer id="analyzeUrlService" interface="com.tyler.module.AnalyzeUrl" directUrl="192.168.6.194:19962" requestTimeout="200000"/>
+    <motan:referer id="analyzePageDetailsService" interface="com.tyler.module.AnalyzePageDetails" directUrl="192.168.6.194:19963" requestTimeout="200000"/>
+    <motan:referer id="analyzePageLinksService" interface="com.tyler.module.AnalyzePageLinks" directUrl="192.168.6.194:19964" requestTimeout="200000"/>
+    <motan:referer id="saveToLocalService" interface="com.tyler.module.SaveToLocal" directUrl="192.168.6.194:19965" requestTimeout="200000"/>
+</beans>

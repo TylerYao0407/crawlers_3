@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<something-else-entirely>
+    <!-- data数据库 -->
+    <proxool>
+		<alias>zdr_data</alias>
+		<driver-url>jdbc:mysql://192.168.6.194:3306/news?useUnicode=true&amp;characterEncoding=UTF-8</driver-url>
+        <driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="admin" />
+			<property name="password" value="admin%2017" />
+		</driver-properties>
+		<minimum-connection-count>2</minimum-connection-count>
+		<maximum-connection-count>50</maximum-connection-count>
+		<simultaneous-build-throttle>5</simultaneous-build-throttle>
+		<house-keeping-sleep-time>60000</house-keeping-sleep-time>
+		<maximum-active-time>3600000</maximum-active-time>
+		<prototype-count>2</prototype-count>
+		<test-before-use>true</test-before-use>
+		<house-keeping-test-sql>select 1 from dual</house-keeping-test-sql>
+	</proxool>
+   <!-- data数据库 -->
+    <proxool>
+		<alias>zdr_caiji</alias>
+		<driver-url>jdbc:mysql://192.168.6.194:3306/news?useUnicode=true&amp;characterEncoding=UTF-8</driver-url>
+        <driver-class>com.mysql.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="admin" />
+			<property name="password" value="admin%2017" />
+		</driver-properties>
+		<minimum-connection-count>2</minimum-connection-count>
+		<maximum-connection-count>500</maximum-connection-count>
+		<simultaneous-build-throttle>5</simultaneous-build-throttle>
+		<house-keeping-sleep-time>60000</house-keeping-sleep-time>
+		<maximum-active-time>3600000</maximum-active-time>
+		<prototype-count>2</prototype-count>
+		<test-before-use>true</test-before-use>
+		<house-keeping-test-sql>select 1 from dual</house-keeping-test-sql>
+	</proxool>
+</something-else-entirely>
